@@ -1,0 +1,14 @@
+.component{
+    margin-top: 10px;
+    overflow: auto;
+    height: 85%;
+}
+#chartId{
+    height: 95%;
+    width: 80%;
+    margin: auto;
+}
+.btn{
+    margin-top: 5px;
+    height: 50px;
+}

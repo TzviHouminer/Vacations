@@ -1,0 +1,37 @@
+html, body, root{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    font-style: italic;
+    color: white;
+    background-image: linear-gradient(45deg,rgb(120, 194, 219) 50%, rgb(218, 218, 217),rgb(255, 255, 150));
+}
+
+.Box{
+    border: 2px black solid;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 3px 5px 13px 0px black;
+}
+
+.card{
+    width: 14rem;
+    box-shadow: 2px 2px 10px gray;
+    &>.card-img-top{
+        width: auto;
+        height: 130px;
+    }
+    &>.card-img-overlay{
+        background-color: rgba(255, 255, 255, 0.4);
+        border-radius: 15px;
+        height: 40px;
+        width: fit-content;
+        padding: 10px;
+    }
+}
+.error{
+    color: red;
+}

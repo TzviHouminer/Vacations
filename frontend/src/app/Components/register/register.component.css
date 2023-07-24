@@ -1,0 +1,13 @@
+.Box{
+    height: 83%;
+    width: 350px;
+    overflow: auto;
+    background-color: rgb(169, 169, 169);
+}
+label{
+    width: -webkit-fill-available;
+    text-align: left;
+}
+.form-group{
+    margin-bottom: 5px;
+}

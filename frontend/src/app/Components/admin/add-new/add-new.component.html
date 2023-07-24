@@ -1,0 +1,33 @@
+<app-admin-nav-bar></app-admin-nav-bar>
+<div class="Box">
+    <h2>Add Vacation</h2>
+    <form (ngSubmit)="submitForm()" #registerForm="ngForm">
+      <div class="form-group">
+        <label for="destination">Destination</label>
+        <input type="text" class="form-control" id="destination" name="destination" [(ngModel)]="destination" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" name="description" rows="4" [(ngModel)]="description" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="startDate">Start Date</label>
+        <input type="date" class="form-control" id="startDate" name="startDate" [(ngModel)]="startDate" [min]="today" required>
+      </div>
+      <div class="form-group">
+        <label for="endDate">End Date</label>
+        <input type="date" class="form-control" id="endDate" name="endDate" [(ngModel)]="endDate" [min]="startDate" required>
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" class="form-control" id="price" name="price" [(ngModel)]="price" required>
+      </div>
+      <div class="form-group">
+        <label for="coverImage">Image</label>
+        <input type="file" class="form-control" id="img" name="img" (change)="onFileChange($event)" required>
+      </div>
+      <span *ngIf="errorMsg" class="error" [innerHTML]="errorMsg"></span>
+      <button type="submit" class="btn btn-primary" [disabled]="!registerForm.form.valid">Add Vacation</button>
+      <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+    </form>
+</div>

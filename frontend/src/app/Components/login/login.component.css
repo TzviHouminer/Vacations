@@ -1,0 +1,30 @@
+.Box{
+    background-color: rgb(169, 169, 169);
+    width: 350px;
+    text-align: center;
+}
+.txt{
+    width: 100%;
+    &>.pass_input{
+        width: -webkit-fill-available;
+    }
+}
+.loginBtn{
+    background-color: wheat;
+}
+label{
+    width: -webkit-fill-available;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.passEye{
+    margin-left: -50px;
+    width: 50px;
+    cursor: pointer;
+    padding: 3px;
+    color: rgb(163, 163, 163);
+    &:hover{
+        color: black;
+    }
+}

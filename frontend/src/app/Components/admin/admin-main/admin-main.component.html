@@ -1,0 +1,22 @@
+<div class="main">
+    <app-admin-nav-bar></app-admin-nav-bar>
+    <div class="d-flex flex-wrap justify-content-center holidays">
+        <div class="card m-2" *ngFor="let item of holidays | slice:(currentPage-1)*pageSize : currentPage*pageSize">
+            <img class="card-img-top" [src]=imgURL+item.img alt="place">
+            <div class="card-img-overlay d-flex align-items-center">
+                <i class="bi bi-pencil btn" (click)="EditHoliday(item.holidayID)">Edit</i>|
+                <i class="bi bi-trash btn" (click)="deleteModal(item.holidayID, item.destination)">Delete</i>
+            </div>
+            
+            <div class="card-body">
+                <h5 class="card-title">{{item.destination}}</h5>
+                <div class="card-subtitle mb-2 text-muted">{{item.startDate | date:'dd/MM/yyyy'}} - {{item.endDate | date:'dd/MM/yyyy'}}</div>
+                <p class="card-text">{{item.description}}</p>
+            </div>
+            <span class="Box">price : {{item.price | currency:"ILS"}}</span>
+        </div>
+    </div>
+    <div class="pagCont d-flex justify-content-center align-items-center">
+        <ngb-pagination [(page)]="currentPage" [pageSize]="pageSize" [collectionSize]="holidays.length" (pageChange)="scrollToTop()"></ngb-pagination>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+.info{
+    background-color: rgba(255,255,255,0.6);
+    border-radius:20px;
+    color: black;
+    font-size: large;
+    font-weight: 700;
+    width: 200px;
+    margin-top: 10%;
+}
+
+.connected{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.headline{
+    color: black;
+    font-size: 8vw;
+    font-family: 'Lobster', cursive;
+    text-shadow: 2px 2px 10px rgb(120, 194, 219), 7px 7px 2px white;
+    animation: glowing 1s infinite;
+
+    height: 50%;
+    margin-right: 3%;
+}
+
+@keyframes glowing {
+    0% {
+      text-shadow: 0 0 0px white;
+    }
+    50% {
+        text-shadow: 2px 2px 7px rgb(120, 194, 219), 7px 7px 2px white;
+    }
+    100% {
+      text-shadow: 0 0 0px white;
+    }
+}

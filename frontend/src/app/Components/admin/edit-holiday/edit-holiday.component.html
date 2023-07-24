@@ -1,0 +1,35 @@
+<app-admin-nav-bar></app-admin-nav-bar>
+<div class="Box">
+    <h2>Edit Vacation</h2>
+    <form (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="destination">Destination</label>
+        <input type="text" class="form-control" id="destination" name="destination" [(ngModel)]="destination" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" name="description" rows="4" [(ngModel)]="description" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="startDate">Start Date</label>
+        <input type="date" class="form-control" id="startDate" name="startDate" [(ngModel)]="startDate" required>
+      </div>
+      <div class="form-group">
+        <label for="endDate">End Date</label>
+        <input type="date" class="form-control" id="endDate" name="endDate" [(ngModel)]="endDate" [min]="startDate" required>
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" class="form-control" id="price" name="price" [(ngModel)]="price" required>
+      </div>
+      <div class="form-group">
+        <label *ngIf="img" for="img">Current image</label><br/>
+        <img *ngIf="img" [src]=imgURL+img width="300px"><br/>
+        <label for="img">Updated image</label>
+        <input type="file" class="form-control" id="img" name="img" (change)="onFileChange($event)">
+      </div>
+      <span *ngIf="errorMsg" class="error" [innerHTML]="errorMsg"></span>
+      <button type="submit" class="btn btn-primary">Update Vacation</button>
+      <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+    </form>
+</div>

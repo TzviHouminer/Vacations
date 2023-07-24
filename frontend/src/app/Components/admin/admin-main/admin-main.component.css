@@ -1,0 +1,26 @@
+.main{
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 12% 75% 13%;
+    &>*{border: 1px solid white;}
+    &>.holidays{
+        overflow: auto;
+    }
+}
+
+.card-img-overlay{
+    /* &>i{
+        width:auto;
+        height:auto;
+        margin: 3px;
+    }
+    &>span{
+        text-shadow: 1px 1px 4px white;
+        color: black;
+    } */
+}
+
+.pagCont{
+    padding-top: 1rem;
+}

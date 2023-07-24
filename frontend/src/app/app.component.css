@@ -1,0 +1,15 @@
+.MainLayout{
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 25% 74%;
+}
+
+.MainLayout,
+.MainLayout>* {
+    border: 1px solid white;
+}
+
+header{
+    background-image: url("http://localhost:5000/photos/background.jpg");
+}

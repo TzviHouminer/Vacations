@@ -1,0 +1,17 @@
+<h1>Login</h1>
+<div class="Box">
+    <label for="email">Email:</label>
+    <input class="txt" id="email" type="text" [(ngModel)]="email" (blur)="checkEmailValid()"><br/>
+    <span class="error" *ngIf="emailValidError" [innerHTML]="emailValidError"></span>
+
+    <label for="password">Password:</label>
+    <div class="d-flex txt">
+        <input class="pass_input" [type]="passType" [(ngModel)]="password" (keyup)="checkPasswordValid()">
+        <i class='bi passEye' [ngClass]="{'bi-eye':(passType=='password'), 'bi-eye-slash-fill':passType=='text'}" (click)="toggleEye()"></i>
+    </div>
+
+    <span class="error" *ngIf="passwordValidError" [innerHTML]="passwordValidError"></span>
+    <span class="error" *ngIf="isCorrect" [innerHTML]="isCorrect"></span><br/>
+    <input type="button" class="btn loginBtn" (click)="checkLogin()" value="Login"><br/>
+    <input type="button" class="btn" value="Sign-up" (click)="register()">
+</div>

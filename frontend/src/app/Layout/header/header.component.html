@@ -1,0 +1,12 @@
+<div class="d-flex flex-row-reverse align-items-strech justify-content-between pl-2"> 
+    <div class="headline d-flex align-items-center justify-content-start">
+        Plan a Plane
+    </div>
+    <div class="connected d-flex flex-column align-items-start" *ngIf="name">
+        <input type="button" class="btn btn-danger" value="LogOut" (click)="logout()">
+        <div class="info">
+            <h5 *ngIf="isAdmin">Admin</h5>
+            Hi {{name}}!
+        </div>
+    </div>
+</div>
